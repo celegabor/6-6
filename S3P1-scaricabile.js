@@ -33,8 +33,7 @@ function boundary(num) {
         return 'false'
     }
  }
- console.log( boundary(109)
- );
+ console.log( boundary(109));
 /* ESERCIZIO 3
  Scrivi una funzione chiamata "reverseString", che accetta una stringa come parametro e la ritorna invertita (es.: EPICODE => EDOCIPE).
 */
@@ -48,10 +47,10 @@ function reverseString(text) {
     let finalText = reverse.join("")
     return finalText
 }
+let risultato = finalText
+console.log(finalText)
 
-console.log(reverseString('buongiorno'))
-
-
+reverseString('buongiorno')
 
 /* ESERCIZIO 4
  Scrivi una funzione chiamata "upperFirst", che accetta una stringa come parametro e la ritorna rendendo maiuscola ogni lettera iniziale di ogni parola.
@@ -60,13 +59,17 @@ console.log(reverseString('buongiorno'))
 /* SCRIVI QUI LA TUA RISPOSTA */
 let testoFinale = ''
 function upperFirst(words) {
-    let array = words.charAt(0).toUpperCase()
-    let restoDelTesto = words.slice(1)
-    return testoFinale = array + restoDelTesto
-}
-upperFirst('buonasera')
+    let array = words.split(' ')
 
-console.log(testoFinale)
+    for (let index = 0; index < array.length; index++) {
+        array[index] = array[index].charAt(0).toUpperCase() + array[index].slice(1)
+
+    }
+
+    return array.join(" ")
+}
+
+console.log(upperFirst('buonasera come stai? bene grazie te?'))
 
 /* ESERCIZIO 5
  Scrivi una funzione chiamata "giveMeRandom", che accetta come parametro un numero chiamato n e ritorna un array contenente n numeri random contenuti tra 0 e 10.
@@ -75,10 +78,25 @@ console.log(testoFinale)
 /* SCRIVI QUI LA TUA RISPOSTA */
 
 function giveMeRandom(n) {
+    let array = []
 
-    return 
+    if (n <= 10){
+
+
+        for (let index = 0; index < n; index++) {
+            array[index] = Math.floor (Math.random() * 10) 
+            
+        }
+    } else {
+        console.log('Devi inserire un numero più piccolo!!')
+    }
+    return array
+ 
 }
-console.log('es 5 non sono riuscito');
+
+console.log(giveMeRandom(10))
+
+
 //EXTRA:
 /* ESERCIZIO 1
  Scrivi una funzione chiamata "area" che riceve due parametri (l1, l2) e calcola l'area del rettangolo associato.
@@ -98,16 +116,16 @@ console.log('area rettangolo: ' + area (10, 5))
 /* SCRIVI QUI LA TUA RISPOSTA */
 
 function crazyDiff(numb) {
-    let numFisso = 19
-    if(numb > numFisso) {
-        return totale = (numb - numFisso) * 3
-    } else {
-        return totale = numFisso - numb
+    const numFisso = 19
+    let totale =  numb - numFisso
+    if (totale > numFisso) {
+        totale = totale * 3
+        return totale
     }
-    
+    return totale
 }
 
-console.log(crazyDiff(20));
+console.log(crazyDiff(150));
 
 /* ESERCIZIO 3
  Scrivi una funzione chiamata "codify" che accetta una stringa come parametro.
@@ -162,4 +180,4 @@ function cutString(params) {
     return params.slice(1, -1)
 }
 
-console.log(cutString('parola'));
+console.log(cutString('parola lunga'));

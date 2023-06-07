@@ -47,10 +47,10 @@ function reverseString(text) {
     let finalText = reverse.join("")
     return finalText
 }
-let risultato = finalText
-console.log(finalText)
+let risultato = reverseString('buongiorno')
+console.log(risultato)
 
-reverseString('buongiorno')
+
 
 /* ESERCIZIO 4
  Scrivi una funzione chiamata "upperFirst", che accetta una stringa come parametro e la ritorna rendendo maiuscola ogni lettera iniziale di ogni parola.

@@ -57,7 +57,7 @@ console.log(risultato)
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
-let testoFinale = ''
+
 function upperFirst(words) {
     let array = words.split(' ')
 
